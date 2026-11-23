@@ -1,0 +1,125 @@
+/* ---------- Base ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #eef2f7;
+    color: #1f2937;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 16px;
+}
+
+.contenedor {
+    background: #ffffff;
+    width: 100%;
+    max-width: 460px;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #1e3a8a;
+}
+
+/* ---------- Menú principal ---------- */
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+/* ---------- Botones ---------- */
+.boton {
+    display: block;
+    padding: 12px 20px;
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.boton:hover {
+    background: #1d4ed8;
+}
+
+/* ---------- Formularios ---------- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+form .boton {
+    margin-top: 16px;
+}
+
+/* ---------- Mensajes ---------- */
+.mensaje {
+    margin-top: 20px;
+    padding: 14px;
+    border-radius: 8px;
+}
+
+.mensaje p {
+    margin: 4px 0;
+}
+
+.error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+}
+
+.resultado {
+    background: #dcfce7;
+    color: #166534;
+    border: 1px solid #86efac;
+}
+
+/* ---------- Enlace de volver ---------- */
+.enlace {
+    display: block;
+    margin-top: 24px;
+    text-align: center;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.enlace:hover {
+    text-decoration: underline;
+}

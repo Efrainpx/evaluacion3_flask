@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block titulo %}Ejercicio 2{% endblock %}
+
+{% block contenido %}
+    <h1>Ejercicio 2: Nombre más largo</h1>
+
+    <form method="POST" action="{{ url_for('ejercicio2') }}">
+        <label for="nombre1">Nombre 1</label>
+        <input type="text" id="nombre1" name="nombre1" required>
+
+        <label for="nombre2">Nombre 2</label>
+        <input type="text" id="nombre2" name="nombre2" required>
+
+        <label for="nombre3">Nombre 3</label>
+        <input type="text" id="nombre3" name="nombre3" required>
+
+        <button type="submit" class="boton">Enviar</button>
+    </form>
+
+    {% if error %}
+        <p class="mensaje error">{{ error }}</p>
+    {% endif %}
+
+    {% if resultado %}
+        <div class="mensaje resultado">
+            {% if resultado.empate %}
+                <p>Empate entre: <strong>{{ resultado.nombres | join(", ") }}</strong></p>
+            {% else %}
+                <p>Nombre más largo: <strong>{{ resultado.nombres[0] }}</strong></p>
+            {% endif %}
+            <p>Cantidad de letras: <strong>{{ resultado.cantidad }}</strong></p>
+        </div>
+    {% endif %}
+
+    <a class="enlace" href="{{ url_for('inicio') }}">Volver al menú</a>
+{% endblock %}
